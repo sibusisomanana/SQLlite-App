@@ -1,0 +1,51 @@
+
+
+<div class="container">
+
+    <div class="head">
+     <h1>Enter Employee</h1> 
+    </div>
+  <br>
+  <br>
+    <div class="content">
+
+    
+<div class="items">
+
+  
+    <ion-item>
+        <ion-label stacked> Name</ion-label>
+        <ion-input type="text" [(ngModel)]="student.name"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label stacked> Email</ion-label>
+        <ion-input type="text" [(ngModel)]="student.email"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label stacked> Occupation</ion-label>
+        <ion-input type="text" [(ngModel)]="student.occupation"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+          <ion-label stacked> Phone</ion-label>
+          <ion-input type="text" [(ngModel)]="student.phone"></ion-input>
+        </ion-item>
+
+        
+</div>
+<br>
+<br>
+<br>
+    <div class="Button">
+        <button class="btn" (click)="createStudent()">Add Employee</button>
+    </div>
+
+  
+
+
+
+    </div>
+
+</div>

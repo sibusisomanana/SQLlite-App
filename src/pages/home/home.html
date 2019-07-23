@@ -1,0 +1,60 @@
+<ion-content padding>
+<ion-navbar >
+  <ion-title>mLAB Soweto 2019</ion-title>
+</ion-navbar>
+<div class="container">
+
+  
+  <p>To begin please click the icon below...</p>
+  <div class="content">
+
+  <ion-list>
+    <ion-item *ngFor="let student of students; let i=index">
+        <div class="Emp">
+            <div class="pic"> <img src={{pictures[i].path}}></div>
+            <h1>{{pictureCount}}</h1>
+    
+                   
+          </div>
+
+      <div class="detail">
+       
+        <h3> Name: {{ student.name}} </h3>
+        <h3> Occupation:  {{ student.occupation}}</h3>
+        <h3> Email: {{ student.email }}</h3>
+        <h3> Phone:  {{ student.phone}}</h3><br/>
+      </div>
+     
+        <button (click)="delete(student.id)" class="DelBtn"> <ion-icon ios="ios-trash" md="md-trash"></ion-icon></button> <br/>
+        <br>
+        <button (click)="editStudent(student.id)" class="DelBtn"><ion-icon ios="ios-open" md="md-open"></ion-icon></button>
+
+     
+     
+      
+    </ion-item>
+  </ion-list>
+
+
+  
+
+
+  </div>
+
+  
+</div>
+
+
+<ion-fab bottom center>
+  <button ion-fab >
+    <ion-icon name='ios-navigate'></ion-icon>
+  </button>
+  <ion-fab-list side="top">
+    <button (click)="addStudents()" ion-fab><ion-icon  name="person-add"></ion-icon></button>
+    <button  (click)="showAbout()" ion-fab><ion-icon name="alert"></ion-icon></button>
+
+    
+  </ion-fab-list>
+</ion-fab>
+
+</ion-content>
